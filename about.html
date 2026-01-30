@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Church of God Ghana</title>
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- ABOUT PAGE CSS -->
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Church of God Ghana Logo">
+    </a>
+
+    <nav class="nav" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-give">Give</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="about-hero animate">
+  <div class="about-hero-overlay">
+    <div class="about-hero-content">
+      <h1>About Church of God Ghana</h1>
+      <p>
+        A Christ-centered church committed to faith, love,
+        discipleship, and transforming lives across Ghana.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HISTORY ================= -->
+<section class="about-section animate">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <h2>Our History</h2>
+      <p>
+        The Church of God Ghana was established with a strong foundation in faith and obedience to God’s Word.
+      </p>
+      <p>
+        Over the years, the church has grown to impact communities across Ghana, spreading the Gospel and nurturing believers.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/history.jpeg" alt="Church History">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MISSION & VISION ================= -->
+<section class="mission-section animate">
+  <div class="mission-overlay">
+    <div class="mission-content">
+      <h2>Our Mission & Vision</h2>
+      <p>
+        Our mission is to preach the Gospel of Jesus Christ, make disciples, and equip believers to live godly lives.
+      </p>
+      <p>
+        Our vision is to be a Spirit-filled church transforming lives and communities through love, service, and truth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="about-section animate">
+  <div class="container about-grid reverse">
+
+    <div class="about-image">
+      <img src="images/leaders.webp" alt="Church Leadership">
+    </div>
+
+    <div class="about-text">
+      <h2>Our Leadership</h2>
+      <p>
+        Our pastors and leaders are devoted to teaching, prayer, and shepherding God’s people with integrity.
+      </p>
+      <p>
+        Leadership at Church of God Ghana emphasizes service, humility, and love for the body of Christ.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CORE VALUES ================= -->
+<section class="values-section animate">
+  <div class="container">
+    <h2 class="center-title">Our Core Values</h2>
+
+    <div class="values-grid">
+      <div class="value-card">Faith in Christ</div>
+      <div class="value-card">Love & Unity</div>
+      <div class="value-card">Holiness</div>
+      <div class="value-card">Service to Humanity</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: Logo -->
+    <div class="footer-logo">
+      <img src="images/logo.webp" alt="Church of God Ghana Logo">
+      <p>Church of God Ghana</p>
+    </div>
+
+    <!-- CENTER: Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Give</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Contact / Social -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Address: Kumasi, Ghana</p>
+      <p>Email: info@churchofGodghana.org</p>
+      <p>Phone: +233 123 456 789</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/groups/845661738819596/?ref=share&mibextid=NSMWBT"><img src="assets/icons/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@cogg.national.youth?_r=1&_t=ZS-93JTtFmSFx2"><img src="assets/icons/tiktok.webp" alt="tiktok"></a>
+        <a href="https://youtube.com/@churchofgodghana-citychurc6029?si=qMZL_UdJsggnewLU"><img src="assets/icons/youtube.webp" alt="youtube"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Church of God Ghana. All Rights Reserved.</p>
+  </div>
+</footer>
+   
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  // Hamburger Menu
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Scroll Animations
+  const animatedItems = document.querySelectorAll(".animate");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedItems.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>

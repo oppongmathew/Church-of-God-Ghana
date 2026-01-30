@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Church of God Ghana</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Church of God Ghana">
+    </a>
+
+    <nav class="nav" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-give">Give</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="gallery-hero animate">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Church Gallery</h1>
+      <p>
+        Capturing moments of worship, fellowship, and service in the house of God.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="gallery-intro animate">
+  <div class="container">
+    <h2>Moments of Faith & Fellowship</h2>
+    <p>
+      Our gallery reflects the vibrant life of Church of God Ghana — from worship services
+      and prayer meetings to outreach programs and youth activities.
+    </p>
+  </div>
+</section>
+
+<!-- ===== GALLERY GRID ===== -->
+<section class="gallery-section animate">
+  <div class="container gallery-grid">
+
+    <img src="images/worship.webp" alt="Worship" class="gallery-img">
+    <img src="images/sunday.webp" alt="Sunday Service" class="gallery-img">
+    <img src="images/youth min.jpg" alt="Youth Fellowship" class="gallery-img">
+    <img src="images/blue.webp" alt="Church Choir" class="gallery-img">
+    <img src="images/p.webp" alt="Prayer Meeting" class="gallery-img">
+    <img src="images/mission.jpeg" alt="Community Outreach" class="gallery-img">
+    <img src="images/studies.webp" alt="Bible Study" class="gallery-img">
+    <img src="images/event.webp" alt="Church Event" class="gallery-img">
+    <img src="images/ch1.jpg" alt="Worship" class="gallery-img">
+    <img src="images/leaders.webp" alt="Sunday Service" class="gallery-img">
+    <img src="images/Listening-to-one-of-the-plenary-speakers.jpg" alt="Youth Fellowship" class="gallery-img">
+    <img src="images/choir.jpg" alt="Church Choir" class="gallery-img">
+    <img src="images/children.webp" alt="Prayer Meeting" class="gallery-img">
+    <img src="images/women.webp" alt="Community Outreach" class="gallery-img">
+    <img src="images/youth.webp" alt="Bible Study" class="gallery-img">
+    <img src="images/OIP (14).webp" alt="Church Event" class="gallery-img">
+    <img src="images/R.jpeg" alt="Prayer Meeting" class="gallery-img">
+    <img src="images/music.avif" alt="Community Outreach" class="gallery-img">
+    <img src="images/R (1).jpeg" alt="Bible Study" class="gallery-img">
+    <img src="images/machine.jpg" alt="Church Event" class="gallery-img">
+
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="images/lightbox.avif">
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: Logo -->
+    <div class="footer-logo">
+      <img src="images/logo.webp" alt="Church of God Ghana Logo">
+      <p>Church of God Ghana</p>
+    </div>
+
+    <!-- CENTER: Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Give</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Contact / Social -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Address: Kumasi, Ghana</p>
+      <p>Email: info@churchofGodghana.org</p>
+      <p>Phone: +233 123 456 789</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/groups/845661738819596/?ref=share&mibextid=NSMWBT"><img src="assets/icons/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@cogg.national.youth?_r=1&_t=ZS-93JTtFmSFx2"><img src="assets/icons/tiktok.webp" alt="tiktok"></a>
+        <a href="https://youtube.com/@churchofgodghana-citychurc6029?si=qMZL_UdJsggnewLU"><img src="assets/icons/youtube.webp" alt="youtube"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Church of God Ghana. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+  // Hamburger
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.onclick = () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  };
+
+  // Scroll animation
+  const items = document.querySelectorAll(".animate");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+  items.forEach(item => observer.observe(item));
+
+  // Lightbox
+  const galleryImages = document.querySelectorAll(".gallery-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => lightbox.style.display = "none";
+  lightbox.onclick = e => { if(e.target === lightbox) lightbox.style.display = "none"; };
+</script>
+
+</body>
+</html>

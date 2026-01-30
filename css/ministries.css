@@ -1,0 +1,123 @@
+/* ================= GENERAL FIXES ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HERO ================= */
+.ministries-hero {
+  height: 60vh;
+  background: url("../images/music.avif") center/cover no-repeat;
+  position: relative;
+}
+
+.ministries-hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ministries-hero-content {
+  color: #fff;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.ministries-hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.ministries-hero-content p {
+  font-size: 1.2rem;
+}
+
+/* ================= MINISTRIES GRID ================= */
+.ministries-section {
+  padding: 4rem 1rem;
+}
+
+.center-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #006b3c;
+}
+
+.ministries-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.ministry-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card img {
+  width: 100%;
+  height: auto;
+}
+
+.ministry-card h3 {
+  color: #006b3c;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.ministry-card p {
+  padding: 0 1rem 1rem 1rem;
+  color: #555;
+}
+
+.ministry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= ANIMATIONS ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= GRID RESPONSIVENESS ================= */
+@media (min-width: 768px) {
+  .ministries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ministries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+  .ministries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ministries-hero-content h1 {
+    font-size: 2rem;
+  }
+}

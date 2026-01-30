@@ -1,0 +1,159 @@
+/* ================= GENERAL FIXES ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.about-hero {
+  height: 70vh;
+  background: url("../images/youth.webp") center/cover no-repeat;
+}
+
+.about-hero-overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero-content {
+  color: #fff;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.about-hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+  font-size: 1.1rem;
+}
+
+/* ================= ABOUT SECTIONS ================= */
+.about-section {
+  padding: 4rem 1rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  color: #006b3c;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse > * {
+  direction: ltr;
+}
+
+/* ================= MISSION ================= */
+.mission-section {
+  background: url("../images/hands.webp") center/cover no-repeat;
+}
+
+.mission-overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: auto;
+  color: #fff;
+}
+
+/* ================= CORE VALUES ================= */
+.values-section {
+  background: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
+.center-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.values-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: 600;
+}
+
+/* ================= ANIMATIONS ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 767px) {
+  .about-grid,
+  .values-grid {
+    grid-template-columns: 1fr !important; /* Single column mobile */
+    gap: 1.5rem;
+  }
+
+  .about-section,
+  .values-section,
+  .mission-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-hero-content,
+  .mission-content {
+    padding: 0 1rem;
+  }
+
+  .about-hero-content h1,
+  .mission-content h2 {
+    font-size: 2rem;
+  }
+
+  .value-card {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

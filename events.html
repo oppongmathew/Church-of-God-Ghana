@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Church of God Ghana</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/events.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.webp" alt="Church of God Ghana">
+    </a>
+
+    <nav class="nav" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-give">Give</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="events-hero animate">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Upcoming Events</h1>
+      <p>
+        Join us in worship, fellowship, and spiritual growth
+        through our upcoming programs and services.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS LIST -->
+<section class="events-section animate">
+  <div class="container">
+
+    <div class="event-card">
+      <img src="images/worship.webp" alt="Revival Service">
+      <div class="event-info">
+        <span class="date">📅 March 10 – 12, 2026</span>
+        <h3>Annual Revival & Prayer Conference</h3>
+        <p>
+          A powerful time of prayer, worship, and the Word.
+          Come expecting renewal, healing, and spiritual growth.
+        </p>
+        <p><strong>📍 Venue:</strong> Adjamesu, Bekwai-Ashanti</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/OIP (5).webp" alt="Youth Program">
+      <div class="event-info">
+        <span class="date">📅 April 5, 2026</span>
+        <h3>Youth Empowerment & Leadership Summit</h3>
+        <p>
+          A transformational gathering focused on leadership,
+          purpose, and faith for young people.
+        </p>
+        <p><strong>📍 Venue:</strong> Adjamesu, Bekwai-Ashanti</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="images/youth.webp" alt="Prayer Meeting">
+      <div class="event-info">
+        <span class="date">📅 Every Friday</span>
+        <h3>Weekly Prayer & Fasting Service</h3>
+        <p>
+          Join us every Friday evening as we seek God’s presence
+          and intercede for the nation and the church.
+        </p>
+        <p><strong>⏰ Time:</strong> 6:00 PM – 8:00 PM</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="events-cta animate">
+  <div class="container">
+    <h2>Be Part of Our Programs</h2>
+    <p>
+      We welcome you to worship with us and experience
+      God’s presence in every gathering.
+    </p>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: Logo -->
+    <div class="footer-logo">
+      <img src="images/logo.webp" alt="Church of God Ghana Logo">
+      <p>Church of God Ghana</p>
+    </div>
+
+    <!-- CENTER: Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Give</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Contact / Social -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Address: Kumasi, Ghana</p>
+      <p>Email: info@churchofGodghana.org</p>
+      <p>Phone: +233 123 456 789</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/groups/845661738819596/?ref=share&mibextid=NSMWBT"><img src="assets/icons/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@cogg.national.youth?_r=1&_t=ZS-93JTtFmSFx2"><img src="assets/icons/tiktok.webp" alt="tiktok"></a>
+        <a href="https://youtube.com/@churchofgodghana-citychurc6029?si=qMZL_UdJsggnewLU"><img src="assets/icons/youtube.webp" alt="youtube"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Church of God Ghana. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.onclick = () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  };
+
+  const items = document.querySelectorAll(".animate");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold:0.2 });
+  items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
