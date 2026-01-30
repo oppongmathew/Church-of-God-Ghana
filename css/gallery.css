@@ -31,24 +31,16 @@ body { overflow-x:hidden; font-family:Arial, sans-serif; }
   margin-bottom:1rem;
 }
 
-/* Gallery grid wrapper */
 .gallery-grid {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Columns */
-.gallery-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  gap: 10px; /* slightly smaller gap to avoid overflow */
+  grid-template-columns: repeat(5, 1fr); /* 5 columns desktop/tablet */
+  max-width: 100%; /* ensure grid never exceeds container width */
+  box-sizing: border-box;
 }
 
 /* Images */
-.gallery-column img {
+.gallery-grid img {
   width: 100%;
   height: auto;
   border-radius: 6px;
@@ -57,24 +49,38 @@ body { overflow-x:hidden; font-family:Arial, sans-serif; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-column img:hover {
+.gallery-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* MOBILE VIEW: two vertical columns, side by side scrollable if needed */
+/* CONTAINER FIX: no overflow */
+.container {
+  width: 100%;
+  max-width: 1200px; /* optional max width for desktop */
+  padding: 0 15px; /* add side padding */
+  margin: 0 auto;
+  box-sizing: border-box; /* prevent horizontal overflow */
+}
+
+/* MOBILE VIEW: 2 columns, stacked */
 @media (max-width: 768px) {
   .gallery-grid {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 10px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
   }
 
-  .gallery-column {
-    flex: 0 0 45%; /* each column ~45% width for mobile */
+  .container {
+    padding: 0 10px; /* smaller padding for small screens */
   }
 }
+
+/* TABLET VIEW: 5 columns still, adjust if needed */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 
 /* LIGHTBOX */
 .lightbox {
@@ -108,15 +114,4 @@ body { overflow-x:hidden; font-family:Arial, sans-serif; }
 .animate.show {
   opacity:1;
   transform:translateY(0);
-}
-
-/* RESPONSIVE */
-@media(min-width:768px){
-  .gallery-grid { grid-template-columns:repeat(3,1fr); }
-}
-@media(min-width:1024px){
-  .gallery-grid { grid-template-columns:repeat(4,1fr); }
-}
-@media(max-width:767px){
-  .hero-content h1 { font-size:2rem; }
 }
